@@ -1,9 +1,11 @@
 import React from 'react'
-
+import { Button } from '@/components/ui/button'
+import Hero from '@/components/custom/Hero'
 const page = () => {
   return (
     <div className='text-3xl'>
-      <h2>Hello</h2>
+      
+      <Hero/>
     </div>
   )
 }

@@ -1,7 +1,8 @@
+
 import localFont from 'next/font/local'
-// import "./globals.css";
+import "./globals.css";
 
-
+import Provider from './provider';
 
 
 
@@ -13,10 +14,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html
-      lang="en"
-      
-    >
-      <body className="min-h-full flex flex-col">{children}</body>
+      lang="en" suppressHydrationWarning>
+      <body >
+       <Provider
+       >{children}</Provider>
+        </body>
     </html>
   );
 }
