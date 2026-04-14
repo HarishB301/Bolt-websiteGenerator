@@ -4,7 +4,7 @@ import "./globals.css";
 
 import Provider from './provider';
 
-
+import ConvexClientProvider from './ConvexClientProvider';
 
 export const metadata = {
   title: "Create Next App",
@@ -16,8 +16,12 @@ export default function RootLayout({ children }) {
     <html
       lang="en" suppressHydrationWarning>
       <body >
-       <Provider
-       >{children}</Provider>
+        <ConvexClientProvider>
+           <Provider>
+              {children}
+           </Provider>
+        </ConvexClientProvider>
+       
         </body>
     </html>
   );
